@@ -1,34 +1,76 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import logoImg from "./assets/nlw-logo.svg";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
-}
+    <div className="max-w[1344px] mx-auto flex items-center flex-col my-20">
+      <img src={logoImg} alt="logo" />
 
-export default App
+      <h1 className="text-6xl text-white font-black mt-20">
+        Seu{" "}
+        <span className="bg-nlw-gradient bg-clip-text text-transparent">
+          duo
+        </span>{" "}
+        está aqui!
+      </h1>
+
+      <div className="grid grid-cols-6 gap-6 mt-16">
+        <a href="" className="relative rounded-lg overflow-hidden">
+          <img src="/game-1.png" alt="" />
+
+          <div className="w-full pt-16 pb-4 px-4 bg-game-gradient absolute bottom-0 left-0 right-0">
+            <strong className="font-bold text-white block">
+              League of Legends
+            </strong>
+            <span className="text-zinc-300 text-sm block">4 anúncios</span>
+          </div>
+        </a>
+        <a href="" className="relative rounded-lg overflow-hidden">
+          <img src="/game-2.png" alt="" />
+
+          <div className="w-full pt-16 pb-4 px-4 bg-game-gradient absolute bottom-0 left-0 right-0">
+            <strong className="font-bold text-white block">DOTA 2</strong>
+            <span className="text-zinc-300 text-sm block">4 anúncios</span>
+          </div>
+        </a>
+        <a href="" className="relative rounded-lg overflow-hidden">
+          <img src="/game-3.png" alt="" />
+
+          <div className="w-full pt-16 pb-4 px-4 bg-game-gradient absolute bottom-0 left-0 right-0">
+            <strong className="font-bold text-white block">
+              Counster-Strike
+            </strong>
+            <span className="text-zinc-300 text-sm block">4 anúncios</span>
+          </div>
+        </a>
+        <a href="" className="relative rounded-lg overflow-hidden">
+          <img src="/game-4.png" alt="" />
+
+          <div className="w-full pt-16 pb-4 px-4 bg-game-gradient absolute bottom-0 left-0 right-0">
+            <strong className="font-bold text-white block">Apex Legends</strong>
+            <span className="text-zinc-300 text-sm block">4 anúncios</span>
+          </div>
+        </a>
+        <a href="" className="relative rounded-lg overflow-hidden">
+          <img src="/game-5.png" alt="" />
+
+          <div className="w-full pt-16 pb-4 px-4 bg-game-gradient absolute bottom-0 left-0 right-0">
+            <strong className="font-bold text-white block">Fortnite</strong>
+            <span className="text-zinc-300 text-sm block">4 anúncios</span>
+          </div>
+        </a>
+        <a href="" className="relative rounded-lg overflow-hidden">
+          <img src="/game-6.png" alt="" />
+
+          <div className="w-full pt-16 pb-4 px-4 bg-game-gradient absolute bottom-0 left-0 right-0">
+            <strong className="font-bold text-white block">
+              World of Warcraft
+            </strong>
+            <span className="text-zinc-300 text-sm block">4 anúncios</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  );
+};
+
+export default App;
