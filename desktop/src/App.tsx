@@ -69,6 +69,8 @@ const App = () => {
           </div>
         </a>
       </div>
+
+      <div className="bg-[#2A2624] px-8 py-6"></div>
     </div>
   );
 };
