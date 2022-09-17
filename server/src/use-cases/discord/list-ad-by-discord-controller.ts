@@ -1,15 +1,15 @@
 import { Request, Response } from "express";
-import { ListAllAdsUseCase } from "./list-all-ads-use-case";
+import { ListAdByDiscordUseCase } from "./list-ad-by-discord-use-case";
 
-export class ListAllAdsController {
-  constructor(private adsService: ListAllAdsUseCase) {}
+export class ListAdByDiscordController {
+  constructor(private adService: ListAdByDiscordUseCase) {}
 
   async handle(request: Request, response: Response): Promise<Response> {
-    const { id }: { id: string } = Object(request["params"]);
+    const { adId }: { adId: string } = Object(request["params"]);
 
     try {
-      const data = await this.adsService.execute({
-        gameId: id,
+      const data = await this.adService.execute({
+        adId,
       });
 
       return response.status(200).send({ success: true, data });
