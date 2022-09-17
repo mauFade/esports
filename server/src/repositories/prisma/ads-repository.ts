@@ -8,8 +8,16 @@ export class PrismaAdsRepository implements IAdsRepository {
       where: {
         gameId,
       },
+      orderBy: {
+        createdAt: "desc",
+      },
     });
 
-    return ads;
+    return ads.map((ad) => {
+      return {
+        ...ad,
+        weekDays: ad.weekDays.split(","),
+      };
+    });
   }
 }
